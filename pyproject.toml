@@ -7,6 +7,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+fastapi = {extras = ["all"], version = "^0.103.2"}
+aiohttp = "^3.8.5"
 
 
 [build-system]
