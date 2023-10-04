@@ -9,6 +9,8 @@ readme = "README.md"
 python = "^3.11"
 fastapi = {extras = ["all"], version = "^0.103.2"}
 aiohttp = "^3.8.5"
+dynaconf = "^3.2.3"
+requests = "^2.31.0"
 
 
 [build-system]

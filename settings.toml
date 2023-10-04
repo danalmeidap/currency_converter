@@ -1,0 +1,5 @@
+name = "currency-converter"
+
+[api]
+url='https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&'
+
