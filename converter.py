@@ -3,7 +3,7 @@ from os import getenv
 from fastapi import HTTPException, status
 from config import settings
 
-API_KEY:str = getenv("API_KEY")
+API_KEY:str = getenv('API_KEY')
 
 def sync_converter(from_currency:str, to_currency:str, price:float):
     url:str = settings.api.url+f'from_currency={from_currency}&to_currency={to_currency}&apikey={API_KEY}'
@@ -20,4 +20,4 @@ def sync_converter(from_currency:str, to_currency:str, price:float):
     
     exchange_rate: float = float(data["Realtime Currency Exchange Rate"]["5. Exchange Rate"])
 
-    return  price * exchange_rateP
+    return  price * exchange_rate
