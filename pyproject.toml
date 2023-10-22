@@ -11,6 +11,7 @@ fastapi = {extras = ["all"], version = "^0.103.2"}
 aiohttp = "^3.8.5"
 dynaconf = "^3.2.3"
 requests = "^2.31.0"
+black = "^23.10.0"
 
 
 [build-system]
