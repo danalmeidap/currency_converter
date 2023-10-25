@@ -10,7 +10,7 @@ API_KEY: str = getenv("API_KEY")
 def sync_converter(from_currency: str, to_currency: str, price: float):
     url: str = (
         settings.api.url
-        + f"from_currency={from_currency}&to_currency={to_currency}&apikey={API_KEY}"
+        +f"from_currency={from_currency}&to_currency={to_currency}&apikey={API_KEY}"
     )
 
     try:
@@ -58,10 +58,8 @@ async def async_converter(from_currency: str, to_currency: str, price: float):
             detail=f"Probably invalid currencies given",
         )
 
-    exchange_rate: float = float(
-        data["Realtime Currency Exchange Rate"]["5. Exchange Rate"]
-    )
-
-    return price * exchange_rate
+    return {
+        to_currency: float(data["Realtime Currency Exchange Rate"]["5. Exchange Rate"]) * price
+    }
 
 
